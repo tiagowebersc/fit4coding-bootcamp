@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+*:not(input){
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    position: relative;
+    background-color: #CCCCCC;
+}
+
+main{
+    width: 600px;
+    margin: 0 auto;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+h3{
+    margin: 1rem 0;
+}
+
+p{
+    text-align: justify;
+}
+
+article{
+    padding: 0.4rem;
+    margin: 0.4rem;
+
+    background-color: #fff;
+}
+
+img{
+    height: 70px;
+    width: 70px;
+
+    padding: 0.4rem;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(165, 165, 165);
+}
+
+section div{
+    display: flex;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul a{
+    padding: 20px 50px;
+    margin: 2px;
+
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#news h1,
+[href="#news"]{
+    background-color: #2980b9;
+}
+
+#buzz h1,
+[href="#buzz"]{
+    background-color: #c0392b;
+}
+
+#sports h1,
+[href="#sports"]{
+    background-color: #27ae60;
+}
+
+#economy h1,
+[href="#economy"]{
+    background-color: #16a085;
+}
+
+#news ,
+#buzz,
+#sports,
+#economy{
+    padding-top: 80px;
+}
