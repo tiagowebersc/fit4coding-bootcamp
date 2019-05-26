@@ -1,0 +1,96 @@
+/*********************************************
+******************* ALWAYS  ******************
+**********************************************/
+*{
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+*:not(input){
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/*********************************************/
+
+/************** Mobile Version ***************/
+p{
+    text-align: justify;
+}
+
+h1{
+    margin: 10px;
+    padding: 30px;
+
+    background-color: rgb(255, 245, 203);
+
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+article{
+    margin: 5px;
+    padding: 20px;
+
+    background-color: rgb(203, 236, 255);
+}
+
+aside{
+    text-align: center;
+}
+
+footer{
+    margin: 10px;
+    padding: 20px;
+
+    background-color: rgb(255, 199, 199);
+}
+
+img{
+    padding: 10px;
+    width: 100px;
+
+    background-color: white;
+
+    animation-name: blinkProd;
+    animation-duration: 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;    
+}
+
+@keyframes blinkProd{
+    from {
+        background-color: white;
+    }
+    to{
+        background-color: red;
+    }
+}
+
+/************** Tablet Version ***************/
+@media screen and (min-width: 480px){
+    div{
+        display: flex;
+    }    
+}
+
+/************** Desktop Version ***************/
+@media screen and (min-width: 960px){
+    img{
+        width: 300px;
+
+        /* stops the animation */
+        animation: initial;
+    }
+
+    div{
+        display: inline-block;
+    }  
+
+    main{
+        display: flex;
+    }    
+}
