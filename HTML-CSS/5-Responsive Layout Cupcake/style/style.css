@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+
+    font-family: "Cookie";
+}
+*:not(input){
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+header{
+    background-color: #0c7973;    
+}
+
+body{
+    background-color: #2a8878;
+}
+
+footer{
+    margin: 0.5rem;
+
+    color:  #feebda;
+
+    font-size: 2rem;
+}
+
+[alt="menu"]{
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+
+    color: #feebda;
+}
+[alt="logo_menu"]{
+    display: none;
+}
+
+[alt="mini"]{
+    display: none;
+}
+
+[type="submit"]{
+    display: none;
+}
+
+#menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+#menu ul a{
+    display: block;
+
+    margin: 1rem 2rem;
+
+    color: #991d42;
+    
+    
+    text-decoration:  none;
+    font-size: 2rem;
+}
+#menu{
+    background-color: #feebda;
+    display: none;
+}
+
+#search{
+    display: flex;
+    justify-content: space-between;
+}
+#search input{
+    width: 10rem;
+
+    padding: 5px;    
+    margin: 0.5rem;
+
+    border: none; 
+    border-radius: 1rem;
+    color: #feebda;
+    background-color: #2a8878;
+
+    font-size: 2rem;
+}
+#search input::placeholder{
+    color: lightgrey;
+}
+
+#menu{
+    position: relative;
+}
+
+#main_article{
+    margin: 1rem;
+
+    text-align: center;
+}
+
+h1{
+    margin: 2rem;
+
+    color: #feebda;
+
+    text-align: center;
+    font-size: 5rem;
+}
+
+p{
+    font-family: 'Bitter', serif;
+    font-size: 1.2rem;
+}
+
+#main_article p{
+    color: #feebda;
+
+    text-align: center;
+}
+
+#main_article a{
+    color: #e782a4;
+
+    font-size: 1.5rem;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+}
+
+section article{
+    margin: 1rem;
+    padding: 2rem;
+
+    color: #e782a4;
+    background-color: #feebda;
+}
+
+section article h2{
+    border-bottom: 1px dotted #e782a4;
+
+    text-align: center;
+    font-size: 3rem;
+}
+
+section article p{
+
+    text-align: justify;
+}
+
+@media screen and (min-width: 800px){
+    section article p{
+
+        text-align: center;
+    }
+
+    [alt="menu"]{
+        display: none;
+    }
+    #search{
+        justify-content: center;
+    }
+
+    #search input{
+        width: 20rem;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    #main_article{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: left;
+    }
+
+    #main_article h1{
+        text-align: left;
+        margin-left: 0;
+    }
+
+    #main_article p{
+        text-align: left;
+    }
+
+    #smallAds{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #smallAds article{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    #menu ul{
+        flex-direction: row-reverse;
+        justify-content: right;
+    }
+    [alt="logo_menu"]{
+        display: block;
+        position: absolute;
+        top: -50px;
+        left: 10px;
+    }
+    #smallAds{
+        flex-wrap: nowrap;
+    }
+
+    #main_article{
+        margin: 5rem 10rem;
+    }
+
+    #smallAds article{
+        position: relative;
+    }
+
+    #main_article p{
+        column-count: 2;
+    }
+
+    [alt="mini"]{
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: 45%;
+    }
+    #search{
+        flex-direction: row-reverse;
+        justify-content: right;
+    }
+    [alt="logo"]{
+        display: none;
+    }
+}
