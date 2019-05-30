@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'poiret_oneregular';
+    src: url('poiretone-regular-webfont.woff2') format('woff2'),
+         url('poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('HelveticaNeue.ttf');
+}
