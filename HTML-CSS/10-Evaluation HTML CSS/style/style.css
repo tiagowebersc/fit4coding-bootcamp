@@ -1,0 +1,185 @@
+/* Variables ******************/
+/* Fonts **********************/
+/* Colors *********************/
+/******************************/
+/* best practices */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+/* reseting layout */
+*:not(input) {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/houndstooth-pattern.png");
+  font-family: Arial;
+}
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+  font-family: "Coiny", cursive;
+}
+
+h2, h3, h4 {
+  color: #1e3799;
+}
+
+h1 {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+h2 {
+  margin: 6rem 2.5rem 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+h4 {
+  padding: 1rem 0;
+}
+
+/* Navigation */
+nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav > ul a {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  /*The menu items become darker blue on mouse hover. */
+}
+
+nav > ul a:hover {
+  background-color: #2f4b88;
+}
+
+/* Main content */
+main {
+  width: 60rem;
+  margin: 0 auto 10rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  /* There is a shadow under the main content area. */
+  -webkit-box-shadow: 5px 5px 20px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 20px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* Figure with round border */
+figure > img {
+  width: 9rem;
+  border-radius: 50%;
+  border: 5px solid #1e3799;
+  /* There is a scale up effect in CSS3 when hovering over the pictures with the mouse. */
+}
+
+figure > img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* Figure text centralized */
+figcaption {
+  color: #1e3799;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  padding-left: 0.5rem;
+}
+
+form input {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+form [type="submit"] {
+  background-color: #1e3799;
+  color: #ffffff;
+}
+
+/* Footer fixed at the bottom with copyrights */
+footer {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  background-color: #6a89cc;
+}
+
+footer p {
+  display: block;
+  padding: 1rem;
+  color: #ffffff;
+  text-align: right;
+}
+
+/* Header bar fixed on top with navigation */
+#blueBar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #6a89cc;
+}
+
+/* Species side by side */
+#species > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+/* Contact and Map side by side */
+#contactMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contactMap p {
+  padding: 0.5rem 0;
+}
+
+#contactMap article {
+  width: 30%;
+}
+
+#contactMap iframe {
+  width: 65%;
+  border: 5px solid #1e3799;
+}
+/*# sourceMappingURL=style.css.map */

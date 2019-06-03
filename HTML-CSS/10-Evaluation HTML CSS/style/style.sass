@@ -1,0 +1,118 @@
+/* Variables ******************/
+/* Fonts **********************/
+$TitleFont : 'Coiny', cursive
+$ContentFont : Arial
+/* Colors *********************/
+$MainColor : #1e3799
+$SecondaryColor : #6a89cc
+$FontColor : #000000
+$AlternativeFontColor : #ffffff
+$MainBackgroundColor : #ffffff
+/******************************/
+/* best practices */
+*
+    box-sizing: border-box
+    transition-duration: 0.3s
+/* reseting layout */
+*:not(input)
+    border: none
+    margin: 0
+    padding: 0
+body
+    background-image: url('../images/houndstooth-pattern.png')
+    font-family: $ContentFont
+h1, h2, h3, h4
+    color: $AlternativeFontColor
+    font-family: $TitleFont
+h2, h3, h4
+    color: $MainColor
+h1
+    margin-left: 2rem
+    font-size: 1.3rem
+h2
+    margin: 6rem 2.5rem 2.5rem
+    text-align: center  
+h3
+    padding-top: 3rem
+    padding-bottom: 1.5rem
+h4
+    padding: 1rem 0
+/* Navigation */
+nav>ul
+    display: flex
+    list-style: none
+    a
+        display: inline-block
+        padding: 1rem
+        text-decoration: none
+        color: $AlternativeFontColor
+        /*The menu items become darker blue on mouse hover. */
+        &:hover
+            background-color: darken($SecondaryColor, 25%)
+/* Main content */
+main
+    width: 60rem
+    margin: 0 auto 10rem
+    padding: 1.5rem
+    background-color: $MainBackgroundColor
+    border-radius: 0.5rem
+    /* There is a shadow under the main content area. */
+    box-shadow: 5px 5px 20px 7px rgba(0,0,0,0.5)
+/* Figure with round border */
+figure>img
+    width: 9rem
+    border-radius: 50%
+    border: 5px solid $MainColor
+    /* There is a scale up effect in CSS3 when hovering over the pictures with the mouse. */
+    &:hover
+        transform: scale(1.1)
+/* Figure text centralized */
+figcaption
+    color: $MainColor
+    text-align: center
+    font-weight: bold
+form
+    padding-left: 0.5rem
+    input
+        padding: 0.2rem
+        border-radius: 0.2rem
+    [type="submit"]
+        background-color: $MainColor
+        color: $AlternativeFontColor
+/* Footer fixed at the bottom with copyrights */
+footer
+    position: fixed
+    z-index: 1
+    width: 100%
+    bottom: 0
+    background-color: $SecondaryColor
+    p
+        display: block
+        padding: 1rem
+        color: $AlternativeFontColor
+        text-align: right
+/* Header bar fixed on top with navigation */            
+#blueBar
+    position: fixed
+    z-index: 1
+    width: 100%
+    top: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $SecondaryColor
+/* Species side by side */
+#species>div
+    display: flex
+    justify-content: space-evenly
+/* Contact and Map side by side */
+#contactMap
+    display: flex
+    justify-content: space-between
+    p
+        padding: 0.5rem 0
+    article
+        width: 30%
+    iframe
+        width: 65%
+        border: 5px solid $MainColor
