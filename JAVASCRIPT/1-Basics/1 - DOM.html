@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Restaurant</title>
+    <style>
+      h1 {
+        color: white;
+        background-color: brown;
+
+        text-align: center;
+        font-size: 5rem;
+      }
+      p {
+        text-align: center;
+        font-size: 3rem;
+      }
+      .open {
+        color: cornsilk;
+        background-color: green;
+      }
+      .closed {
+        color: lightpink;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rest'O'Ranch</h1>
+    <p id="opening">open/close</p>
+    <script>
+      //put as the content if the restaurant
+      //is open or closed
+      //1 - OPEN from 11h to 14h
+      //2 - OPEN from 19h to 24h
+      //3 - if the restorant open in less then 15 minutes
+
+      /*
+       1 GATHER data of 
+        the current hour 
+        and current minutes
+        using documentation of Date().getHours()
+      */
+      const hour = new Date().getHours();
+      const minute = new Date().getMinutes();
+
+      let open = false;
+      let countdown = 0;
+      /*
+          2 - HANDLE the data
+              The hours should be between ? and ?
+      */
+      if ((hour >= 11 && hour < 14) || (hour >= 19 && hour < 24)) {
+        open = true;
+      } else {
+        open = false;
+      }
+      if (
+        (hour == 10 || hour == 13 || hour == 18 || hour == 23) &&
+        minute >= 45
+      ) {
+        countdown = 60 - minute;
+      }
+
+      /*
+          3 - DISPLAY the data
+              Select the #opening element
+              Replace its content with OPEN or CLOSED
+      */
+      const myParagraph = document.querySelector("#opening");
+      if (open) {
+        myParagraph.textContent = "OPEN";
+        if (countdown > 0)
+          myParagraph.textContent =
+            myParagraph.textContent +
+            " - It will close in " +
+            countdown +
+            " minutes!";
+        myParagraph.classList.add("open");
+      } else {
+        myParagraph.textContent = "CLOSED";
+        if (countdown > 0)
+          myParagraph.textContent =
+            myParagraph.textContent +
+            " - It will open in " +
+            countdown +
+            " minutes!";
+        myParagraph.classList.add("closed");
+s      }
+    </script>
+  </body>
+</html>
