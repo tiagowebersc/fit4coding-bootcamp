@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .cuby {
+        background-color: red;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        border-radius: 5px;
+        font-size: 7rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cuby"></div>
+    <script>
+      /*
+            We aim to create a game where we can move cubby
+
+            When a key is pressed down on the document
+            get the key that was pressed using key, code, or keyCode property of event
+            if the key pressed is the down arrow
+            increase the CSS top property
+            HINT : cuby.style.top = posTop + "%"; //and posTop should start at 0
+         ADVANCED :
+             //move cubby 💩 using the arrow keys
+             //moving down when you press .... down
+             //move right when you press.... right
+        */
+      const cuby = document.querySelector(".cuby");
+      document.addEventListener("keyup", function(e) {
+        moveCuby(e);
+      });
+
+      function moveCuby(e) {
+        if (e.code === "ArrowUp")
+          cuby.style.top = makeMove(cuby.style.top, "-");
+        if (e.code === "ArrowDown")
+          cuby.style.top = makeMove(cuby.style.top, "+");
+        if (e.code === "ArrowRight")
+          cuby.style.left = makeMove(cuby.style.left, "+");
+        if (e.code === "ArrowLeft")
+          cuby.style.left = makeMove(cuby.style.left, "-");
+      }
+      function makeMove(position, direction) {
+        let newPosition = +position.replace("%", "");
+        if (direction === "+") newPosition += 5;
+        else newPosition -= 5;
+        if (newPosition < 0) newPosition = 0;
+        return newPosition + "%";
+      }
+    </script>
+  </body>
+</html>
