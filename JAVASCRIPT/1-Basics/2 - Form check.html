@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form id="formulaire" action="envoi.php">
+      <label>Nom</label><br />
+      <input id="nom" type="text" name="" />
+      <br />
+      <label>Email</label><br />
+      <input id="email" type="text" name="" />
+      <br />
+      <label>Numero de tel</label><br />
+      <input id="number" type="text" name="" />
+      <br />
+      <button type="submit">Envoyer</button>
+    </form>
+    <script>
+      /*
+        When the form is submitted
+            GATHER : get the #nom input, input value and length of this input value
+            LOGIC : check if the name length if above 4
+            DISPLAY :
+                put a green border if valid
+                put a red border if wrong
+            MEDIUM : check for the phone tel to have exactly than 9 characters
+            ADVANCED : The email should contain a "@" and a dot "."
+            HINT : use .indexOf('.') > -1
+            BONUS : Verify this on the fly using the input "keyup"
+        */
+      const form = document.querySelector("form");
+      const nomInput = document.querySelector("#nom");
+      const emailInput = document.querySelector("#email");
+      const phoneInput = document.querySelector("#number");
+
+      function checkInputs(event) {
+        let prevent = false;
+        // user name
+        if (nomInput.value.length >= 4) {
+          nomInput.style.borderColor = "green";
+        } else {
+          nomInput.style.borderColor = "red";
+          prevent = true;
+        }
+        // phone
+        if (phoneInput.value.length === 9) {
+          phoneInput.style.borderColor = "green";
+        } else {
+          phoneInput.style.borderColor = "red";
+          prevent = true;
+        }
+        // email
+        const email = emailInput.value;
+        if (email.indexOf("@") > 0 && email.indexOf(".") > email.indexOf("@")) {
+          emailInput.style.borderColor = "green";
+        } else {
+          emailInput.style.borderColor = "red";
+          prevent = true;
+        }
+
+        if (prevent) event.preventDefault();
+      }
+      form.addEventListener("submit", function(event) {
+        checkInputs(event);
+      });
+      nomInput.addEventListener("keyup", checkInputs);
+      emailInput.addEventListener("keyup", checkInputs);
+      phoneInput.addEventListener("keyup", checkInputs);
+    </script>
+  </body>
+</html>
