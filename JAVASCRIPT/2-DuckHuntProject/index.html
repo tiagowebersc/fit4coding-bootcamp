@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Duck Hunt by Victor & Tiago</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Duck Hunt</h1>
+    </header>
+    <main>
+      <div id="duck"></div>
+      <div id="welcome">
+        <h2>Helcome to Duck Hunt</h2>
+        <p>by Victor / Tiago</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Mouse</td>
+              <td><input id="userMouseInput" type="text" /></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Keyboard</td>
+              <td><input id="userKeyboardInput" type="text" /></td>
+              <td>Computer? <input type="checkbox" id="keyboardComputer" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <input type="button" value="Start" id="startGamButton" />
+      </div>
+      <div id="hitScreen">
+        <img src="images/duckHit.png" alt="" />
+      </div>
+      <div id="missScreen">
+        <img src="images/duckMiss.png" alt="" />
+      </div>
+      <div id="winScreen">
+        <h2>Winner!</h2>
+        <h2 id="winnerName"></h2>
+        <input type="button" value="Restart" id="restartGamButton" />
+        <input type="button" value="New Game" id="newGamButton" />
+      </div>
+    </main>
+    <footer>
+      <table id="score">
+        <thead>
+          <tr>
+            <th>Keyboard</th>
+            <th>Score</th>
+            <th>Mouse</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="userKeyboard"></td>
+            <td id="scoreKeyboard"></td>
+            <td id="userMouse"></td>
+            <td id="scoreMouse"></td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+    <script src="script/game.js"></script>
+  </body>
+</html>
