@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #target {
+        transition-duration: 0.3s;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: moveIt;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+      }
+
+      #target:hover {
+        height: 50px;
+        width: 50px;
+      }
+
+      @keyframes moveIt {
+        0% {
+          top: 0;
+          left: 0;
+        }
+
+        25% {
+          top: 0%;
+          left: 100%;
+          transform: translateX(-100%);
+        }
+
+        50% {
+          top: 100%;
+          left: 100%;
+          transform: translateX(-100%) translateY(-100%);
+        }
+
+        75% {
+          top: 100%;
+          left: 0%;
+          transform: translateY(-100%);
+        }
+
+        100% {
+          top: 0;
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="target"></div>
+    <script>
+      //YOU WILL NEED to give a name to the callback function
+      //in the Event Listener
+      //in order to be able to use removeEventListener
+      /*
+            We aim to create a game of clicking on a moving target
+            1 - Create an event listener that launch a function called "win"
+                when we click on the target
+                To begin the win function only log "you won" in the console
+            2 - We improve the win function : 
+                stop the animation using animationPlayState
+                Make the target become green
+                Disable the click event listener
+            ADVANCED : restart the game if the user click again on the target : 
+                target become red
+                event listener that win is enable again
+                the animation start again
+
+        */
+      let finished = false;
+      const target = document.querySelector("#target");
+      target.addEventListener("click", win);
+      target.addEventListener("click", restart);
+
+      function win() {
+        finished = true;
+        target.style.animationPlayState = "paused";
+        target.style.backgroundColor = "green";
+        target.removeEventListener("click", win);
+        console.log("you won!");
+      }
+      function restart() {
+        if (finished) {
+          finished = false;
+          target.style.animationPlayState = "running";
+          target.style.backgroundColor = "red";
+          target.addEventListener("click", win);
+        }
+      }
+    </script>
+  </body>
+</html>
