@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Le Chifoumy en jQuery</title>
+	</head>
+	<body>
+		<header>
+			<h1>Le Chifoumy en jQuery</h1>
+			<p>Défiez votre ordinateur !</p>
+		</header>
+		<main>
+			<section id="userChoice">
+				<ul>
+					<li>
+						Fais ton choix :
+					</li>
+					<li>
+						<img src="svg/stone.svg" alt="Choix Pierre" width="50" height="50">
+					</li>
+					<li>
+						<img src="svg/paper.svg" alt="Choix Feuille"  width="50" height="50">
+					</li>
+					<li>
+						<img src="svg/scissors.svg" alt="Choix Ciseaux" width="50" height="50">
+					</li>
+				</ul>
+			</section>
+
+			<section id="playGround">
+				<div id="resultGame"></div>
+				<article id="userGame">
+					<img id="userPierre" src="svg/stone.svg" alt="User Pierre" width="250" height="250">
+					<img id="userFeuille" src="svg/paper.svg" alt="User Feuille" width="250" height="250">
+					<img id="userCiseaux" src="svg/scissors.svg" alt="User Ciseaux" width="250" height="250">
+				</article>
+
+				<article id="computerGame">
+					<img id="compPierre" src="svg/stone.svg" alt="User Pierre" width="250" height="250">
+					<img id="compFeuille" src="svg/paper.svg" alt="User Feuille" width="250" height="250">
+					<img id="compCiseaux" src="svg/scissors.svg" alt="User Ciseaux" width="250" height="250">
+				</article>
+
+				<aside>
+					<p id="playGame">Lancer la partie</p>
+					<p id="playAgain">Rejouer</p>
+				</aside>
+
+			</section>
+
+		</main>
+
+
+		<!-- Chargement du CDN jQuery (avant de charger les script de la page) -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
