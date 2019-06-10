@@ -1,0 +1,62 @@
+body{
+	background-color: #eee;
+	text-align: center;
+}
+
+h1{
+	margin-bottom: 0;
+}
+
+header p {
+	margin: 0;
+}
+
+li, #playGround article{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#playGround {
+    position: relative;
+    width: 550px;
+    margin: auto;
+}
+
+#playGround article {
+	position: relative;
+	width: 250px;
+	height: 250px;
+}
+
+#playGround img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+#playGame, #playAgain {
+    background-color: black;
+    width: 150px;
+    margin: auto;
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+#resultGame {
+    position: absolute;
+    background-color: green;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    font-size: 30px;
+    z-index: 1000;
+    top: 60px;
+    left: 180px;
+    display: none;
+
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
