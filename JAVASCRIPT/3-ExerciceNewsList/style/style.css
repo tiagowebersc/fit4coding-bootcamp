@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+form {
+    text-align: center;
+    margin: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+section {
+    width: 800px;
+    margin: auto;
+}
+
+article {
+    position: relative;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+article:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0 0 rgb(82, 82, 82);
+}
+
+
+article h2 {
+    color: #202124;
+}
+
+article p {
+    color: #a0a0a1;
+}
+
+article a {
+    color: #4285f4;
+    text-decoration: none;
+    border: 1px solid #4285f4;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+article a:hover {
+    color: white;
+    text-decoration: underline;
+    background-color: #4285f4;
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+article.science::before {
+    content: "SCIENCE";
+    border-color: #41d160;
+    color: #36a54e;
+}
+
+article.politics::before {
+    content: "POLITICS";
+    border-color: #d18e41;
+    color: #a57536;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+}
+
+ul a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 0.5rem;
+    text-transform: uppercase;
+
+}
+
+a[href="#science"] {
+    border-color: #41d160;
+    color: #36a54e;
+}
+
+a[href="#politics"] {
+    border-color: #d18e41;
+    color: #a57536;
+}
+
+a[href="#all"] {
+    border-color: #b6b6b6;
+    color: #7c7c7c;
+}
+
+a.selected {
+    border-width: 5px;
+}

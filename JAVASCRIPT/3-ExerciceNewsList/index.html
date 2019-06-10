@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <h1>Trending News</h1>
+    <form action="#">
+      <select name="category" id="category">
+        <option value="all"> All </option>
+        <option value="science"> Science </option>
+        <option value="politics"> Politics</option>
+      </select>
+      <input type="submit" value="Filter" />
+    </form>
+    <!-- BONUS PART -->
+    <ul>
+        <li>
+            <a href="#all" class="selected">All</a>
+        </li>
+        <li>
+            <a href="#science">Science</a>
+        </li>
+        <li>
+            <a href="#politics">Politics</a>
+        </li>
+    </ul>
+    
+
+    <section id="trending"></section>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
