@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+  </head>
+
+  <body>
+    <section id="container">
+      <h1>Sign In</h1>
+      <form id="signIn">
+        <ul>
+          <li>
+            <label for="username">User Name:</label>
+            <span><input id="username" name="username" type="text"/></span>
+          </li>
+          <li>
+            <label for="pswd">Password :</label>
+            <span><input id="pswd" type="password" name="pswd"/></span>
+          </li>
+          <li>
+            <label for="pswdConfirm">Password Confirmation:</label>
+            <span
+              ><input id="pswdConfirm" type="password" name="pswdConfirm"
+            /></span>
+          </li>
+          <li>
+            <button type="submit">Sign In</button>
+          </li>
+        </ul>
+      </form>
+
+      <div id="pswd_info">
+        <h4>Your passwork must contains :</h4>
+        <ul>
+          <li id="letter" class="invalid">
+            At least <strong>a letter</strong>
+          </li>
+          <li id="capital" class="invalid">
+            At least <strong>a capital letter</strong>
+          </li>
+          <li id="number" class="invalid">
+            At least <strong>a number</strong>
+          </li>
+          <li id="length" class="invalid">
+            At least <strong>8 caracters</strong>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="js/vanilla-script.js"></script>
+  </body>
+</html>
