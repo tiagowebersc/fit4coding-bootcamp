@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JQuery Project</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">FigurActors</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#sectionHome"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formToValidate">Availability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sectionActors">Actors</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="sectionHome" class="row border-top border-bottom mt-3 mb-3">
+        <!-- Tittle -->
+        <div class="col-12">
+          <h1 class="display-4">Pick a category:</h1>
+        </div>
+        <!-- Buttons -->
+        <div class="col-12 text-center mt-2 mb-2">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary active">
+              <input
+                type="radio"
+                name="options"
+                id="male"
+                autocomplete="off"
+                checked
+              />
+              <i class="fas fa-male"></i>
+              <p>Male</p>
+            </label>
+            <label class="btn btn-primary">
+              <input
+                type="radio"
+                name="options"
+                id="female"
+                autocomplete="off"
+              />
+              <i class="fas fa-female"></i>
+              <p>Female</p>
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="baby" autocomplete="off" />
+              <i class="fas fa-baby"></i>
+              <p>Baby</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <form class="border-bottom pb-3 mb-3" id="formToValidate" novalidate>
+        <div class="form-row">
+          <div class="col-6">
+            <label for="companyName">Company</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              required
+              placeholder="Company name"
+            />
+            <div class="invalid-feedback">
+              Please informe a company name. (First letter must be uppercase)
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              required
+              placeholder="email@example.com"
+            />
+            <div class="invalid-feedback">
+              Please informe an valid email.
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <label for="category">Category</label>
+            <select class="custom-select" id="category" required>
+              <option selected value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="baby">Baby</option>
+            </select>
+            <div class="invalid-feedback">
+              Please informe a category.
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="actor">Actor</label>
+            <select class="custom-select" id="actor" required>
+              <option value="">Select an actor</option>
+            </select>
+            <div class="invalid-feedback">
+              Please informe an actor.
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">
+              Ask for Availability
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Cards -->
+      <div id="sectionActors" class="card-columns">
+        <div class="card d-none">
+          <img class="card-img-top" src="" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">Example</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom scripts -->
+    <script src="script/actors.js"></script>
+    <script src="script/script.js"></script>
+    <!--<script src="script/vanillaJS.js"></script>-->
+  </body>
+</html>
