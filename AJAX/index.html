@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chat Fit4Coding</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div id="modal">        
+      <form id="signup">
+          <h1>Sign Up</h1>
+        <label for="user">User</label>
+        <input type="text" id="user" />
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" />
+        <span id="errorSignup" class="error"></span>
+        <input type="submit" value="Create user" />
+        <input id="loginOption" type="button" value="Continue with existing user" />
+      </form>
+      <form id="login">            
+          <label for="userL">User</label>
+          <input type="text" id="userL" />
+          <label for="passwordL">Password</label>
+          <input type="password" id="passwordL" />
+          <span id="errorLogin" class="error"></span>
+          <input type="submit" value="Enter Chat" />
+        </form>
+    </div>
+    <h1>Chat Fit4Coding</h1>
+    <article id="chat">
+      <form id="userMessage">
+          <h3></h3>
+        <label for="message">Message</label>
+        <textarea id="message"></textarea>
+        <span id="errorMessage" class="error"></span>
+        <input type="submit" value="Send" />
+      </form>
+      <section id="chatView">
+        </div>
+      </section>
+    </article>
+    <script src="script/script.js"></script>
+  </body>
+</html>

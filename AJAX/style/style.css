@@ -1,0 +1,110 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+*:not(input) {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  margin: 2rem;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.error {
+  color: red;
+}
+
+.chat {
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: darkgray;
+}
+
+.message {
+  padding-left: 1rem;
+}
+
+#modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#signup,
+#login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: beige;
+}
+
+#login {
+  display: none;
+}
+
+#chat {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+#userMessage,
+#chatView {
+  height: 50vh;
+  padding: 1rem;
+}
+
+#userMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: darkgray;
+}
+
+#chatView {
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: floralwhite;
+}
+/*# sourceMappingURL=style.css.map */
