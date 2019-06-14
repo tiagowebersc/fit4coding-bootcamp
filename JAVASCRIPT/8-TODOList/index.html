@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo-List Javascript</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>ToDo List Exercice</h1>
+    </header>
+    <main>
+      <form>
+        <h3>Add new item</h3>
+        <input type="text" id="newItem" />
+        <input type="submit" value="Add" />
+      </form>
+      <section class="todo">
+        <h2>Todo</h2>
+        <ul id="todoList" class="connectedSortable"></ul>
+      </section>
+      <section class="done">
+        <h2>Done</h2>
+        <ul id="doneList" class="connectedSortable"></ul>
+      </section>
+    </main>
+    <footer>
+      <p>Made to organize your live</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script/data.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>

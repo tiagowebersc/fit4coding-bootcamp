@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+*:not(input) {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+h1,
+h2,
+form {
+  text-align: center;
+  margin: 1.2rem;
+}
+
+h2 {
+  margin: 1.2rem 0;
+}
+
+ul {
+  width: 20rem;
+  margin: auto;
+  list-style: none;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
+footer {
+  margin: 1.2rem;
+  margin-top: 4rem;
+}
+
+.todo {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffffce));
+  background-image: linear-gradient(white, #ffffce);
+  -webkit-box-shadow: 5px -5px #39CCCC, -10px 10px #FFDC00;
+          box-shadow: 5px -5px #39CCCC, -10px 10px #FFDC00;
+}
+
+.done {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#7cbb7c));
+  background-image: linear-gradient(white, #7cbb7c);
+  -webkit-box-shadow: 5px -5px #39CCCC, -10px 10px #00961b;
+          box-shadow: 5px -5px #39CCCC, -10px 10px #00961b;
+}
+
+.todoItem {
+  text-decoration: none;
+}
+
+.doneItem {
+  text-decoration: line-through;
+}
+
+#doneList,
+#todoList {
+  min-height: 2rem;
+}
+
+section {
+  margin: 1rem;
+  padding-bottom: 1.2rem;
+  border: 1px solid white;
+  border-radius: 1.2rem;
+}
+
+input[type=checkbox].css-checkbox {
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  display: none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 3rem;
+  height: 2rem;
+  display: inline-block;
+  line-height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -2rem;
+}
+
+label.css-label {
+  background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_6a85234bd18e936e19750515adec25ca.png);
+  background-size: 2rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*# sourceMappingURL=style.css.map */
