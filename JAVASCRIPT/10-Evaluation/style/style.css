@@ -1,0 +1,319 @@
+/* Variables */
+/* Colors */
+/* Expert part */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+/* Reseting layout */
+*:not(input) {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  /* bar fixed on top with navigation */
+  /* div flex to allow title be always on the center */
+  /* Title on the center of the footer */
+}
+
+header span {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  padding: 0 6rem;
+  color: #ffffff;
+  background-color: #061339;
+  font-family: "Merienda", cursive;
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+header div {
+  position: relative;
+  top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 16rem;
+  background-image: url("../images/background.jpg");
+  padding: 0 6rem;
+}
+
+header h1 {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 8rem;
+  text-shadow: 2px 2px #000000;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 6rem 6rem 3rem 6rem;
+}
+
+/* default style for the titles */
+h1 {
+  color: #FFF;
+  background-color: rgba(47, 64, 115, 0.6);
+  font-family: "Merienda", cursive;
+}
+
+h2,
+h3 {
+  color: #2F4073;
+  font-family: "Merienda", cursive;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+form label,
+form select,
+form textarea,
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-family: "Indie Flower", cursive;
+}
+
+form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+form input {
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: #5a6268;
+}
+
+/* Footer */
+footer {
+  background-color: #ddd;
+  padding: 1rem 6rem 3rem 6rem;
+  /* fixed at the bottom with copyrights */
+}
+
+footer h2,
+footer p {
+  padding: 1rem 0;
+}
+
+footer h2 {
+  font-size: 2rem;
+}
+
+footer img {
+  width: 20rem;
+  display: block;
+  margin: auto;
+  background-color: #7885A5;
+  border-radius: 50%;
+}
+
+footer span {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0 2rem;
+  text-align: right;
+  color: #ffffff;
+  background-color: #061339;
+}
+
+footer:hover img {
+  background-color: #061339;
+}
+
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+/****** style necessary for the slideshow *****/
+/*slideshow - https://www.w3schools.com/howto/howto_js_slideshow.asp */
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dotContainer {
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* for the bigger screen */
+@media screen and (min-width: 1000px) {
+  article {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #slideshowSection {
+    width: 60%;
+  }
+  form {
+    width: 40%;
+    padding-left: 1rem;
+  }
+  form label,
+  form select,
+  form textarea,
+  form input {
+    padding: 0.2rem;
+    margin: 0.4rem 0;
+    font-size: 1rem;
+  }
+  form textarea {
+    height: 8rem;
+    resize: none;
+  }
+  form input {
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    background-color: #5a6268;
+  }
+  header span {
+    padding: 0 12rem;
+  }
+  header div {
+    padding: 0 12rem;
+  }
+  main {
+    padding: 6rem 12rem 3rem 12rem;
+  }
+  /* Footer */
+  footer {
+    padding: 1rem 12rem 3rem 12rem;
+  }
+  footer img {
+    width: 15rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

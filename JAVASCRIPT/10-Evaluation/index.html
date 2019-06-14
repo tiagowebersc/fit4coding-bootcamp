@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OhMyPets !</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Fonts for the project -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Merienda&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <span>OhMyPets !</span>
+      <div>
+        <h1>Adopt our adorable pets!</h1>
+      </div>
+    </header>
+    <main>
+      <!-- Article com slideshow e form -->
+      <article>
+        <!--slideshow - https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <section id="slideshowSection">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="images/pet1.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides fade">
+              <img src="images/pet2.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides fade">
+              <img src="images/pet3.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides fade">
+              <img src="images/pet4.jpg" style="width:100%" />
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <div class="dotContainer">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </section>
+        <form>
+          <h3>Our beloved pets</h3>
+          <div id="requestForm">
+            <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-->
+            <label for="pet-select">Choose your pet :</label>
+            <select id="pet-select">
+              <option value="">-- Select a pet --</option>
+              <option value="dog">Doge</option>
+              <option value="cat">Grumpy</option>
+              <option value="rabbit">Jessica</option>
+              <option value="horse">Horson</option>
+            </select>
+            <label for="motivation-query">Motivation query :</label>
+            <textarea
+              id="motivation-query"
+              placeholder="Please motivate your choice to adopt one of our beloved pet..."
+            ></textarea>
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+      </article>
+    </main>
+    <!-- footer with text and copyrights -->
+    <footer>
+      <!-- Article with text and image-->
+      <article>
+        <section>
+          <h2>Why choosing our pets ...</h2>
+          <p>
+            Sed quid est quod in hac causa maxime homines admirentur et
+            reprehendant meum consilium, cum ego idem antea multa decreverim,
+            que magis ad hominis dignitatem quam ad rei publicae necessitatem
+            pertinerent? Supplicationem quindecim dierum decrevi sententia mea.
+            Rei publicae satis erat tot dierum quot C. Mario ; dis immortalibus
+            non erat exigua eadem gratulatio quae ex maximis bellis. Ergo ille
+            cumulus dierum hominis est dignitati tributus.
+          </p>
+          <p>
+            Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta
+            petamus, amicorum causa honesta faciamus, ne exspectemus quidem, dum
+            rogemur; studium semper adsit, cunctatio absit; consilium vero dare
+            audeamus libere. Plurimum in amicitia amicorum bene suadentium
+            valeat auctoritas, eaque et adhibeatur ad monendum non modo aperte
+            sed etiam acriter, si res postulabit, et adhibitae pareatur.
+          </p>
+        </section>
+        <section>
+          <img src="images/footer-doge.png" alt="" />
+        </section>
+      </article>
+      <span>© OhMyPets</span>
+    </footer>
+    <!-- custom script -->
+    <script src="script/script.js"></script>
+  </body>
+</html>
