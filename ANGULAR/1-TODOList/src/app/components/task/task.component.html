@@ -1,0 +1,20 @@
+<section class="li" [class.checked]="task.done">
+  <div>
+    <input
+      type="checkbox"
+      [(ngModel)]="task.done"
+      [checked]="task.done"
+      (click)="changeState(task)"
+    />
+    <span (click)="changeState(task)"> {{ task.task }}</span>
+  </div>
+  <div>
+    <button (click)="descriptionButton()">
+      <i class="fas fa-search"></i>
+    </button>
+    <button (click)="deleteTodo(task)">
+      <i class="far fa-trash-alt"></i>
+    </button>
+  </div>
+</section>
+<app-description [description]="taskDescription"></app-description>

@@ -1,0 +1,16 @@
+<h3>Pending</h3>
+<ul>
+  <ng-container *ngFor="let task of todoList">
+    <li *ngIf="!task.done">
+      <app-task [task]="task"></app-task>
+    </li>
+  </ng-container>
+</ul>
+<ul>
+  <h3>Done</h3>
+  <ng-container *ngFor="let task of todoList">
+    <li *ngIf="task.done">
+      <app-task [task]="task"></app-task>
+    </li>
+  </ng-container>
+</ul>

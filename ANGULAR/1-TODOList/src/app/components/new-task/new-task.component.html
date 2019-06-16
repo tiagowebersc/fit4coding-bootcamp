@@ -1,0 +1,7 @@
+<label>Task</label>
+<input type="text" [(ngModel)]="newTask.task" />
+<label>Description</label>
+<textarea [(ngModel)]="newTask.description"></textarea>
+<div>
+  <button (click)="createNewTask()"><i class="far fa-plus-square"></i></button>
+</div>
