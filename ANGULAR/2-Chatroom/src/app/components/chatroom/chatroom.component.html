@@ -1,0 +1,20 @@
+<div id="chat">
+  <section *ngIf="chatroom" class="chatView">
+    <div *ngFor="let chat of chatroom" class="chat">
+      <p class="user">{{ chat.user }}</p>
+      <p class="date">{{ chat.date | date: 'dd/mm/yyyy hh:mm:s aaa' }}</p>
+      <p class="message">{{ chat.message }}</p>
+    </div>
+  </section>
+  <form *ngIf="connected()" (ngSubmit)="sendMessage()">
+    <h3>{{ login.user }}</h3>
+    <input
+      type="text"
+      id="message"
+      name="message"
+      [(ngModel)]="message"
+      placeholder="Insert your message ..."
+    />
+    <span class="error">{{ messageError }}</span>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<div>
+  <form (ngSubmit)="register()">
+    <label for="user">User</label>
+    <input required type="text" [(ngModel)]="login.user" name="user" />
+    <label for="password">Password</label>
+    <input
+      required
+      type="password"
+      [(ngModel)]="login.password"
+      name="password"
+    />
+    <label for="confirmpassword">Confirm password</label>
+    <input
+      required
+      type="password"
+      [(ngModel)]="login.confirmPassword"
+      name="confirmpassword"
+    />
+    <p class="error">{{ login.error }}</p>
+    <input type="submit" value="Sign-in" />
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  <form (ngSubmit)="enterUser()">
+    <label for="user">User</label>
+    <input type="text" [(ngModel)]="login.user" name="user" />
+    <label for="password">Password</label>
+    <input type="password" [(ngModel)]="login.password" name="password" />
+    <p class="error">{{ login.error }}</p>
+    <input type="submit" value="Log-in" />
+  </form>
+</div>

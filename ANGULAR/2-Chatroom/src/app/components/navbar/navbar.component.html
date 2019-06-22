@@ -1,0 +1,14 @@
+<h1>Welcome to {{ title }}!</h1>
+
+<nav>
+  <ul>
+    <li *ngIf="!connected()">
+      <a routerLink="/log-in" routerLinkActive="active">Log In</a>
+    </li>
+    <li *ngIf="!connected()">
+      <a routerLink="/sign-in" routerLinkActive="active">Sign In</a>
+    </li>
+    <li><a routerLink="/chatroom" routerLinkActive="active">Chatroom</a></li>
+    <li *ngIf="connected()"><a (click)="logOut()">Log Out</a></li>
+  </ul>
+</nav>
